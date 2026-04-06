@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    grid-template-rows: 70px 1fr;
+    height: 100vh;
+    overflow: hidden;
+    background: #fff;
+}
+
+/* --- Логотип --- */
+.logo {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #000;
+    gap: 3px;
+    z-index: 10;
+    position: relative;
+    right: -20px;
+}
+
+.logo i { font-size: 18px; transform: translateY(-2px); position: relative; top: 2px; }
+
+/* --- НОВАЯ ШАПКА (Header) --- */
+.header-area {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 40px;
+    border-bottom: 1px solid #eee;
+}
+
+.auth-buttons { display: flex; gap: 12px; }
+
+.auth-btn {
+    padding: 8px 18px;
+    border: 2px solid #000;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.login-btn { background: #fff; color: #000; }
+.signup-btn { background: #000; color: #fff; }
+.login-btn:hover { background: #f0f0f0; transform: scale(1.03); }
+.signup-btn:hover { background: #333; transform: scale(1.03); }
+
+/* --- Сайдбар --- */
+.sidebar {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-right: 1px solid #eee;
+}
+
+.top-icons, .bottom-icons { display: flex; flex-direction: column; gap: 20px; }
+
+.icon-btn, .icon-btn1, .icon-btn2, .icon-btn5 {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #000;
+    background: #fff;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.icon-btn:hover, .icon-btn1:hover, .icon-btn2:hover, .icon-btn5:hover {
+    background: #000;
+    color: #fff;
+}
+
+/* Увеличенные размеры иконок */
+.icon-btn i, .icon-btn5 i { font-size: 18px; }
+.icon-btn1 i { font-size: 21px; }
+.icon-btn2 i { font-size: 22px; font-weight: 900; }
+.icon-f { font-size: 24px; font-weight: bold; font-family: 'Times New Roman', Times, serif; }
+
+/* --- Контент Профиля --- */
+.content {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    overflow-y: auto;
+    padding: 60px 50px;
+    background-color: #fff;
+}
+
+.edit-btn {
+    position: relative;
+    right: -845px;
+    top: -30px;
+    background: none;
+    font-size: 18px;
+    color: #000;
+    transition: 0.3s;
+    padding: 10px 25px;
+    border: 2px solid #000;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.edit-btn:hover { transform: scale(1.03); }
+
+.profile-info-row { display: flex; gap: 40px; align-items: center; margin-bottom: 40px; }
+.avatar-placeholder { width: 140px; height: 140px; border: 2px solid #000; border-radius: 50%; position: relative; }
+.status-dot { width: 30px; height: 30px; background: #ccc; border: 2px solid #000; border-radius: 50%; position: absolute; top: 0; right: 0; }
+.social-row { display: flex; gap: 15px; margin-bottom: 40px; }
+.btn-pill { padding: 10px 25px; border: 2px solid #000; border-radius: 25px; font-weight: bold; cursor: pointer; transition: 0.3s; }
+.btn-pill:hover { transform: scale(1.03); }
+.works-title { font-size: 24px; font-weight: bold; margin-bottom: 20px; }
+.empty-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; }
+.work-box { aspect-ratio: 1/1; border: 2px solid #000; border-radius: 15px; background: #fff; transition: 0.3s; cursor: pointer; }
+.work-box:hover { transform: scale(1.03); }
+
+/* === СТИЛИ МОДАЛЬНОГО ОКНА === */
+dialog {
+    border: none;
+    border-radius: 24px;
+    padding: 40px;
+    width: 80vw;
+    max-width: 900px;
+    height: 75vh;
+    max-height: 700px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    background-color: #ffffff;
+    color: #000000;
+    margin: auto;
+}
+
+dialog[open] {
+    display: flex;
+    flex-direction: column;
+    animation: scaleIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(8px);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #eaeaea;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.modal-header h2 { font-size: 32px; font-weight: 700; }
+
+#closeSettings {
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #000;
+    transition: transform 0.2s;
+}
+
+#closeSettings:hover { transform: scale(1.2) rotate(90deg); }
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.setting-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.setting-item select {
+    font-size: 18px;
+    font-weight: normal;
+    padding: 5px 10px;
+    border: none;
+    border-bottom: 2px solid #000;
+    background: transparent;
+    outline: none;
+    cursor: pointer;
+    color: #000;
+    text-align: right;
+    min-width: 150px;
+}
+
+@keyframes scaleIn {
+    from { opacity: 0; transform: scale(0.95) translateY(20px); }
+    to { opacity: 1; transform: scale(1) translateY(0); }
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PiLab</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">    
+    <link rel="stylesheet" href="1styling1.css"> 
+</head>
+<body>
+
+    <div class="logo">
+        <a href="1index1.html"><span>P</span></a>
+        <a href="1index1.html"><i class="fa-solid fa-paint-roller"></i></a>
+        <a href="1index1.html"><span>Lab</span></a>
+    </div>
+
+    <div class="search-area">
+        <div class="search-bar">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Search...">
+        </div>
+        <div class="auth-buttons">
+            <a href="#" class="auth-btn login-btn">LOGIN</a>
+            <a href="#" class="auth-btn signup-btn">SIGN UP</a>
+        </div>
+    </div>
+
+    <div class="sidebar">
+        <div class="top-icons">
+            <a class="icon-btn" href="../Profile/profile.html" title="Profile"><i class="fa-solid fa-user"></i></a> 
+            <a class="icon-btn1" href="../Paint/zxcv.html" title="Add"><i class="fas fa-plus"></i></a> 
+            <a class="icon-btn" href="1index1.html?mode=livepi" title="LivePI"><i class="fas fa-globe-americas"></i></a> 
+            <a class="icon-btn2" href="#" title="Feedback"><i class="fa-solid fa-hand-holding-dollar"></i></a> 
+            <a class="icon-btn icon-f" href="../Forum/Forum.html" title="Forum"><i class="fa-solid fa-f"></i></a> 
+        </div>
+        
+        <div class="bottom-icons">
+            <div class="icon-btn5" title="Settings"><i class="fas fa-cog"></i></div>
+        </div>
+    </div>
+
+    <div class="content-area" id="scroll-container">
+        <div class="masonry" id="masonry-grid"></div>
+    </div>
+
+    <dialog id="settingsModal">
+        <div class="modal-header">
+            <h2>Settings</h2>
+            <button id="closeSettings"><i class="fas fa-times"></i></button>
+        </div>
+        
+        <div class="modal-body">
+            <div class="setting-item">
+                <label for="themeSelect">Theme</label>
+                <select id="themeSelect">
+                    <option value="light">Light</option>
+                    <option value="dark">Dark</option>
+                    <option value="system">System</option>
+                </select>
+            </div>
+            
+            <div class="setting-item">
+                <label for="langSelect">Interface Language</label>
+                <select id="langSelect">
+                    <option value="ru">Русский</option>
+                    <option value="en">English</option>\
+                </select>
+            </div>
+
+        
+                </select>
+            </div>
+        </div>
+    </dialog>
+    
+    <dialog id="settingsModal1">
+        <div class="modal-header">
+            <h2>Help Us</h2>
+            <button id="closeSettings1"><i class="fas fa-times"></i></button>
+        </div>
+
+        <p>Dear friends and creators!</p>
+
+        <p>We are a small team of enthusiasts united by a passion for art and technology. PiLab was born from the dream of creating a space where every artist can freely share their works, get inspired, and connect.</p>
+
+        <p>We develop this website absolutely free of charge, without any hidden motives. Our goal is to make the world of art more accessible and vibrant. We don't ask for money because we believe that creativity should be free.</p>
+
+        <p>However, if our work touches your heart and you feel the desire to support us, we will be sincerely grateful. Any amount you decide to send will help us develop the platform further: add new features, improve the design, and support the community.</p>
+
+        <p>Your support is not only financial help, but also recognition of our work. Thank you for being with us!</p>
+
+        <p>With warmth, the PiLab team</p>
+
+        <div class="modal-body">
+            <div class="setting-item">
+                <label for="themeSelect">Payment Method</label>
+                <select id="themeSelect">
+                    <option value="visa">Visa</option>
+                    <option value="paypal">PayPal</option>
+                    <option value="mastercard">MasterCard</option>
+                    <option value="revolut">Revolut</option>
+                    <option value="blik">Blik</option>
+                </select>
+            </div>
+
+
+
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="accept-btn">Accept</button>
+        </div>
+    </dialog>
+
+    <script src="1scripting1.js"></script>
+</body>
+</html>

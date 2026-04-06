@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PiLab Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+
+    <a href="../Main/1index1.html" class="logo"><span>P</span><i class="fa-solid fa-paint-roller"></i><span>Lab</span></a>
+    
+    <header class="header-area">
+        <div class="auth-buttons">
+            <a href="#" class="auth-btn login-btn">LOGIN</a>
+            <a href="#" class="auth-btn signup-btn">SIGN UP</a>
+        </div>
+    </header>
+
+    <nav class="sidebar">
+        <div class="top-icons">
+            <a href="../Profile/Profile.html" class="icon-btn"><i class="fa-solid fa-user"></i></a>
+            <a href="../Paint/zxcv.html" class="icon-btn1"><i class="fa-solid fa-plus"></i></a>
+            <a href="#" class="icon-btn"><i class="fas fa-globe-americas"></i></a>
+            <a href="#" class="icon-btn2"><i class="fa-solid fa-hand-holding-dollar"></i></a>
+            <a href="../Forum/Forum.html" class="icon-btn icon-f"><i class="fa-solid fa-f"></i></a>
+        </div>
+        <div class="bottom-icons">
+            <div class="icon-btn5" title="Настройки"><i class="fas fa-cog"></i></div>
+        </div>
+    </nav>
+
+    <main class="content">
+        <button class="edit-btn">Edit Profile</button>
+        <section class="profile-section">
+            <div class="profile-info-row">
+                <div class="avatar-placeholder">
+                    <div class="status-dot"></div>
+                </div>
+                
+                <div class="author-bio">
+                    <h2>Nickname</h2>
+                    <p>Описание автора будет здесь. Это чистое пространство для текста.</p>
+                </div>
+            </div>
+
+            <div class="social-row">
+                <div class="btn-pill">YouTube</div>
+                <div class="btn-pill">Facebook</div>
+                <div class="btn-pill">Twitch</div>
+            </div>
+
+            <div class="works-title">Works</div>
+            <div class="empty-grid" id="works-grid">
+            </div>
+        </section>
+    </main>
+
+    <dialog id="settingsModal">
+        <div class="modal-header">
+            <h2>Settings</h2>
+            <button id="closeSettings"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="modal-body">
+            <div class="setting-item">
+                <label for="themeSelect">Theme</label>
+                <select id="themeSelect">
+                    <option value="light">Light</option>
+                    <option value="dark">Dark</option>
+                    <option value="system">System</option>
+                </select>
+            </div>
+            <div class="setting-item">
+                <label for="langSelect">Interface Language</label>
+                <select id="langSelect">
+                    <option value="ru">Русский</option>
+                    <option value="en">English</option>
+                </select>
+            </div>
+        </div>
+    </dialog>
+
+    <script src="profile.js"></script>
+</body>
+</html>
